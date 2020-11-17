@@ -24,7 +24,6 @@ public class MyActivity extends Activity {
 
     AppLocationService gps;
 
-
     AppLocationService appLocationService;
 
     @Override
@@ -63,11 +62,6 @@ public class MyActivity extends Activity {
             public void onClick(View arg0) {
 
                 gps = new AppLocationService(MyActivity.this);
-
-                //you can hard-code the lat & long if you have issues with getting it
-                //remove the below if-condition and use the following couple of lines
-                //double latitude = 37.422005;
-                //double longitude = -122.084095
 
                 if (gps != null) {
                     double latitude = gps.getLatitude();
